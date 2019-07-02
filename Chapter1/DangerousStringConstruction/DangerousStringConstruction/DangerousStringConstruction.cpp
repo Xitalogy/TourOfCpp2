@@ -82,8 +82,10 @@ int main()
     char* csp{ &cs[2] };
 
     std::vector<sMeta> strMeta{ { "st01 &st", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(cs), sizeof(&cs[0])) },
-                                { "st01 s1.", std::string{ cs } }, { "st01 cs.", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(cs), sizeof(&cs[0])) },
-                                { "st01 s2.", std::string{ csp } }, { "st01 csp", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(csp), sizeof(csp)) },
+                                { "st01 s1.", std::string{ cs } },
+                                { "st01 cs.", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(cs), sizeof(&cs[0])) },
+                                { "st01 s2.", std::string{ csp } },
+                                { "st01 csp", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(csp), sizeof(csp)) },
                                 { "st01 s3.", std::string { "1234567" } } };
 
     std::vector<dMeta> dmpMeta{ { "cs", sizeof(cs) }, {"csp", sizeof(csp) } };
@@ -97,9 +99,11 @@ int main()
 
     std::vector<sMeta> strMeta{ { "st02 &st....", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(a1), sizeof(&a1[0])) },
                                 { "st02 s1.....", std::string{ a1 } },
-                                { "st02 s2.....", std::string{ a1p + 4 } }, { "st02 a1p + 4", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(a1p + 4), sizeof(a1p + 4)) } };
+                                { "st02 s2.....", std::string{ a1p + 4 } },
+                                { "st02 a1p....", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(a1p), sizeof(a1p)) },
+                                { "st02 a1p + 4", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(a1p + 4), sizeof(a1p + 4)) } };
 
-    std::vector<dMeta> dmpMeta{ { "a1", sizeof(a1) } };
+    std::vector<dMeta> dmpMeta{ { "a1", sizeof(a1) }, { "a1p", sizeof(a1p) } };
   } st02;
 
   printAll(reinterpret_cast<const char*>(&st02), st02.strMeta, st02.dmpMeta);
