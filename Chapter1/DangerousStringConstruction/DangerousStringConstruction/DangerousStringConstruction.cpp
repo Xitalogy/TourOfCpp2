@@ -99,6 +99,7 @@ int main()
 
     std::vector<sMeta> strMeta{ { "st02 &st....", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(a1), sizeof(&a1[0])) },
                                 { "st02 s1.....", std::string{ a1 } },
+                                { "st02 a1.....", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(a1), sizeof(uintptr_t)) },
                                 { "st02 s2.....", std::string{ a1p + 4 } },
                                 { "st02 a1p....", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(a1p), sizeof(a1p)) },
                                 { "st02 a1p + 4", "0x" + numToHexStr(reinterpret_cast<uintptr_t>(a1p + 4), sizeof(a1p + 4)) } };
