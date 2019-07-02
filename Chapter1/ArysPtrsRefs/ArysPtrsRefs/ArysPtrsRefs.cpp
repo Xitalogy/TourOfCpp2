@@ -21,7 +21,7 @@ struct {
 } st;
 #pragma pack(pop)
 
-size_t ii = 0;
+size_t ii{ 0 };
 
 /*
 void theDataStructureCodeExampleTest() {
