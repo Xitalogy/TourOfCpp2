@@ -1,6 +1,6 @@
 ## A Tour of C++ Explorations
-Code alongs, explorations and amplifications of A Tour of C++, 2nd Edition by Bjarne Straustrup.
-I am reading through this book and doing code alongs, explorations and amplifications.
+I am reading through A Tour of C++, 2nd Edition by Bjarne Straustrup.
+and doing code alongs, explorations and amplifications.
 
 You can find articles I am producing for this effort at the below link:
 
