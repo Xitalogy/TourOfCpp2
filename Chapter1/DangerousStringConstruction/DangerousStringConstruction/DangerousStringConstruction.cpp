@@ -78,6 +78,7 @@ void printAll(const char* stp, const std::vector<sMeta>& strMeta, const std::vec
 int main()
 {
   const struct {
+    
     char cs[8]{ "1234567" };
     char* csp{ &cs[2] };
 
