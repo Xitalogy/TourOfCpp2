@@ -49,11 +49,9 @@ void ChangingPointersTest() {
   char *pd = &d;  // Define pointer-to-char variable pd and assign address of d to it
 
   printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd); // prints out: g f 00EFFB0B 00EFFAFF g f
-  std::cout << std::endl;
 
   pd = pc; // Assign value of pc (address of char variable c) to pd
   printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: 00EFFB0B 00EFFB0B g g
-  std::cout << std::endl;
 
   pc = &d; // Assign directly address of char variable d to pc
   printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: 00EFFAFF 00EFFB0B f g
@@ -64,8 +62,8 @@ void AssigningValuesUsingPointersTest() {
   char *pc = &c; // Define pointer-to-char variable pc and assign address of c to it
 
   printf("%p %c", pc, c); // prints out: 00EFFB0B g
-  std::cout << std::endl;
-  *pc = 'f'; // Assign 'f' to variable c using dereferenced pointer-to-char pc variable
+
+  *pc = 'f'; // Assign 'f' to variable c using dereferenced pointer-to-char variable pc
              // Does not change value of variable pc, rather changes value of variable c to which it points
   printf("%p %c", pc, c); // prints out: 00EFFB0B f
 }
