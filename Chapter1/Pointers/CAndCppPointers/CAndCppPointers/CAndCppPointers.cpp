@@ -42,21 +42,21 @@ void UsingPointersTest() {
 }
 
 void ChangingPointersTest() {
-  char c = 'g';   // Define char variable c and assign 'g' value to it
-  char d = 'f';   // Define char variable c and assign 'f' value to it
+  char c = 'g';   // Define char variable c and assign 'g' to it
+  char d = 'f';   // Define char variable c and assign 'f' to it
 
-  char *pc = &c;  // Define pointer-to-char variable pc and assign address of c value to it
-  char *pd = &d;  // Define pointer-to-char variable pd and assign address of d value to it
+  char *pc = &c;  // Define pointer-to-char variable pc and assign address of c to it
+  char *pd = &d;  // Define pointer-to-char variable pd and assign address of d to it
 
-  printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd); // prints out: g f BA5BA11 BA5BA12 g f
+  printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd); // prints out: g f 00EFFB0B 00EFFAFF g f
   std::cout << std::endl;
 
   pd = pc;
-  printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: BA5BA11 BA5BA11 g g
+  printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: 00EFFB0B 00EFFB0B g g
   std::cout << std::endl;
 
   pc = &d;
-  printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: BA5BA12 BA5BA11 f g
+  printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: 00EFFAFF 00EFFB0B f g
 }
 
 void AssigningValuesUsingPointersTest() {
