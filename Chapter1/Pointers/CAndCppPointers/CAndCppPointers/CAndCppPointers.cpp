@@ -58,7 +58,7 @@ void ChangingPointersTest() {
 }
 
 void AssigningValuesUsingPointersTest() {
-  char c = 'g';  // Define char variable c and assign g to it
+  char c = 'g';  // Define char variable c and assign 'g' to it
   char *pc = &c; // Define pointer-to-char variable pc and assign address of c to it
 
   printf("%p %c", pc, c); // prints out: 00EFFB0B g
