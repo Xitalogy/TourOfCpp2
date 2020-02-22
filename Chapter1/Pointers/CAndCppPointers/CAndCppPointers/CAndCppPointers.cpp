@@ -17,8 +17,8 @@ void IntVarTest() {
 }
 
 void DefiningPointersTest() {
-  char *pc; // Defines a variable of type "pointer to char"
-  int *pi;  // Defines a variable of type "pointer to int"
+  char *pc; // Defines a variable named pc of type "pointer to char"
+  int *pi;  // Defines a variable named pi of type "pointer to int"
 }
 
 void AssigningValuesToPointersTest() {
