@@ -6,14 +6,14 @@ void CharVarTest() {
   c = 'g'; // assign the character 'g' to variable c
            // placing a 'g' in c's memory "storage area"
 
-  printf("%c\n", c); // Print out value of c
+  printf("%c", c); // Print out: g
 }
 
 void IntVarTest() {
   int i;     // Define a variable whose name is i, type is int
   i = 15339; // assign the integer value 15339 to i
 
-  printf("%d\n", i); // Print out value of i
+  printf("%d", i); // Print out: 15339
 }
 
 void DefiningPointersTest() {
@@ -31,27 +31,29 @@ void AssigningValuesToPointersTest() {
   pc = &c;  // Get the address of the char variable c and put it in pc
   pi = &i;  // Get the address of the int variable i and put it in pi
 
-  printf("%p %p", pc, pi);
+  printf("%p %p", pc, pi); // Print out: 00EFFB0B 00EFFAFC
 }
 
 void UsingPointersTest() {
   char c = 'g';  // define char variable c and give it a value: 'g'
   char* pc = &c; // define pointer to char variable pc and give it the value: address of c
 
-  printf("%c %p %c", c, pc, *pc); // prints out: g BA5EBA11 g
+  printf("%c %p %c", c, pc, *pc); // prints out: g 00EFFB0B g
 }
 
 void ChangingPointersTest() {
-  char c = 'g';
-  char d = 'f';
+  char c = 'g';   // Define char variable c and assign 'g' value to it
+  char d = 'f';   // Define char variable c and assign 'f' value to it
 
-  char *pc = &c;
-  char *pd = &d;
+  char *pc = &c;  // Define pointer-to-char variable pc and assign address of c value to it
+  char *pd = &d;  // Define pointer-to-char variable pd and assign address of d value to it
 
-  printf("%c %c %p %p %c %d", c, d, pc, pd, *pc, *pd); // prints out: g f BA5BA11 BA5BA12 g f
+  printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd); // prints out: g f BA5BA11 BA5BA12 g f
+  std::cout << std::endl;
 
   pd = pc;
   printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: BA5BA11 BA5BA11 g g
+  std::cout << std::endl;
 
   pc = &d;
   printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: BA5BA12 BA5BA11 f g
@@ -62,18 +64,26 @@ void AssigningValuesUsingPointersTest() {
   char *pc = &c;
 
   printf("%p %c", pc, c); // prints out: BA5EBA11 g
-
+  std::cout << std::endl;
   *pc = 'f';
   printf("%p %c", pc, c); // prints out: BA5EBA11 f
 }
 
 int main()
 {
+  std::cout << "CharVarTest():" << std::endl;
   CharVarTest();
+  std::cout << std::endl << std::endl << "IntVarTest:" << std::endl;
   IntVarTest();
+  std::cout << std::endl << std::endl << "DefiningPointersTest():" << std::endl;
   DefiningPointersTest();
+  std::cout << std::endl << std::endl << "AssigningValuesToPointersTest:" << std::endl;
   AssigningValuesToPointersTest();
+  std::cout << std::endl << std::endl << "UsingPointersTest():" << std::endl;
   UsingPointersTest();
+  std::cout << std::endl << std::endl << "ChangingPointersTest():" << std::endl;
   ChangingPointersTest();
+  std::cout << std::endl << std::endl << "AssigningValuesUsingPointersTest():" << std::endl;
   AssigningValuesUsingPointersTest();
+  std::cout << std::endl;
 }
