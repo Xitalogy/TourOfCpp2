@@ -14,9 +14,12 @@ Lots of working code for all of this! Below are the direct links to those articl
 
 [https://www.xitalogy.com/programming/2019/08/15/a-tour-of-cpp-arrays-pointers-and-references-under-the-hood.html][arys-ptrs-refs]
 
+[https://www.xitalogy.com/programming/2020/02/09/c-and-cpp-pointer-tutorial.html][pointers]
+
 This is the code repository for my efforts.  Explore around.  I hope you find it interesting
 and helpful.  I am learning tons doing this, and really enjoying myself.
 
 [xitalogy-com]: https://www.xitalogy.com
 [range-based-for-loops]: https://www.xitalogy.com/programming/2019/08/15/a-tour-of-cpp-range-based-for-loop.html
 [arys-ptrs-refs]: https://www.xitalogy.com/programming/2019/08/15/a-tour-of-cpp-arrays-pointers-and-references-under-the-hood.html
+[pointers]: https://www.xitalogy.com/programming/2020/02/09/c-and-cpp-pointer-tutorial.html
