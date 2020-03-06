@@ -73,29 +73,27 @@ void ChangingPointersTest() {
   // Output: g f 006FFBB4 006FFBA8 006FFBCF 006FFBC3 g f
 
   pd = pc; // Assign value in pc to pd
-  printf("%p %p %p %p %c %c", &pc, &pd, pc, pd, *pc, *pd);
-  // Output: 006FFBB4 006FFBA8 006FFBCF 006FFBCF g g
+
+  printf("%p %p %c %c", pc, pd, *pc, *pd);
+  // Output: 006FFBCF 006FFBCF g g
 
   pc = &d; // Assign address of char variable d to pc
-  printf("%p %p %p %p %c %c", &pc, &pd, pc, pd, *pc, *pd);
-  // Output: 006FFBB4 006FFBA8 006FFBC3 006FFBCF f g
+  printf("%p %p %c %c", pc, pd, *pc, *pd);
+  // Output: 006FFBC3 006FFBCF f g
 }
 
 void AssigningValuesUsingPointersTest() {
-  char c = 'g';  // Define char variable c
-                 // Assign 'g' to it
+  char c = 'g';  // Define char variable c and assign 'g' to it
   char* pc = &c; // Define pointer-to-char variable pc
                  // Assign address of c to it
 
-  printf("%p %p %c", &pc, pc, c);
-  // Output: 006FFBC0 006FFBCF g
+  printf("%c", c);
+  // Output: g
 
-  *pc = 'f'; // Assign 'f' to variable c
-             // using dereferenced variable pc
-             // Does not change value of variable pc
-             // Rather, changes value of variable c
+  *pc = 'f'; // Assign 'f' to variable c using dereferenced pointer pc
 
-  printf("%p %p %c", &pc, pc, c); // Output: 006FFBC0 006FFBCF f
+  printf("%c", c);
+  // Output: f
 }
 
 int main()
