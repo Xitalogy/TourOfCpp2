@@ -17,55 +17,68 @@ void IntVarTest() {
 }
 
 void DefiningPointersTest() {
-  char *pc; // Defines a variable named pc of type "pointer to char"
-  int *pi;  // Defines a variable named pi of type "pointer to int"
+  char* pc; // Defines a variable named pc of type "pointer to char"
+  int* pi;  // Defines a variable named pi of type "pointer to int"
 }
 
 void AssigningValuesToPointersTest() {
   char c;   // Define a char variable
   int i;    // Define an integer variable
 
-  char *pc; // Defines a variable of type "pointer to char"
-  int *pi;  // Defines a variable of type "pointer to int"
+  char* pc; // Defines a variable of type "pointer to char"
+  int* pi;  // Defines a variable of type "pointer to int"
 
   pc = &c;  // Get the address of the char variable c and put it in pc
   pi = &i;  // Get the address of the int variable i and put it in pi
 
-  printf("%p %p", pc, pi); // Print out: 00EFFB0B 00EFFAFC
+  printf("%p %p", pc, pi); // Print out: 02 04
+}
+
+void PointerAddressesTest() {
+  char c;    // Define a char variable
+  int i;     // Define an int variable
+
+  char* pc; // Define a variable of type "pointer to char"
+  int* pi;  // Define a variable of type "pointer to int"
+
+  pc = &c;  // Get the address of c and put it in pc
+  pi = &i;  // Get the address of i and put it in pi
+  
+  printf("%p %p %p %p", &pc, &pi, pc, pi); // prints out 0C 09 02 04 - Note: C is the hexadecimal digit that equals 12 decimal
 }
 
 void UsingPointersTest() {
   char c = 'g';  // define char variable c and give it a value: 'g'
   char* pc = &c; // define pointer to char variable pc and give it the value: address of c
 
-  printf("%c %p %c", c, pc, *pc); // prints out: g 00EFFB0B g
+  printf("%c %p %p %c", c, &pc, pc, *pc); // prints out: g 006FFBC0 006FFBCF g
 }
 
 void ChangingPointersTest() {
   char c = 'g';   // Define char variable c and assign 'g' to it
   char d = 'f';   // Define char variable c and assign 'f' to it
 
-  char *pc = &c;  // Define pointer-to-char variable pc and assign address of c to it
-  char *pd = &d;  // Define pointer-to-char variable pd and assign address of d to it
+  char* pc = &c;  // Define pointer-to-char variable pc and assign address of c to it
+  char* pd = &d;  // Define pointer-to-char variable pd and assign address of d to it
 
-  printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd); // prints out: g f 00EFFB0B 00EFFAFF g f
+  printf("%c %c %p %p %p %p %c %c", c, d, &pc, &pd, pc, pd, *pc, *pd); // prints out: g f 006FFBB4 006FFBA8 006FFBCF 006FFBC3 g f
 
   pd = pc; // Assign value of pc (address of char variable c) to pd
-  printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: 00EFFB0B 00EFFB0B g g
+  printf("%p %p %p %p %c %c", &pc, &pd, pc, pd, *pc, *pd); // prints out: 006FFBB4 006FFBA8 006FFBCF 006FFBCF g g
 
   pc = &d; // Assign directly address of char variable d to pc
-  printf("%p %p %c %c", pc, pd, *pc, *pd); // prints out: 00EFFAFF 00EFFB0B f g
+  printf("%p %p %p %p %c %c", &pc, &pd, pc, pd, *pc, *pd); // prints out: 006FFBB4 006FFBA8 006FFBC3 006FFBCF f g
 }
 
 void AssigningValuesUsingPointersTest() {
   char c = 'g';  // Define char variable c and assign 'g' to it
-  char *pc = &c; // Define pointer-to-char variable pc and assign address of c to it
+  char* pc = &c; // Define pointer-to-char variable pc and assign address of c to it
 
-  printf("%p %c", pc, c); // prints out: 00EFFB0B g
+  printf("%p %p %c", &pc, pc, c); // prints out: 006FFBC0 006FFBCF g
 
   *pc = 'f'; // Assign 'f' to variable c using dereferenced pointer-to-char variable pc
              // Does not change value of variable pc, rather changes value of variable c to which it points
-  printf("%p %c", pc, c); // prints out: 00EFFB0B f
+  printf("%p %p %c", &pc, pc, c); // prints out: 006FFBC0 006FFBCF f
 }
 
 int main()
