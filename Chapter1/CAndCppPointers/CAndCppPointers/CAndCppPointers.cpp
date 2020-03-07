@@ -50,28 +50,25 @@ void PointerAddressesTest() {
 }
 
 void UsingPointersTest() {
-  char c = 'g';  // define char variable c
-                 // Give it the value: g
-  char* pc = &c; // define pointer to char variable pc
-                 // Give it the value: address of c
+  char c = 'g';  // define char variable c and give it the value: g
+  char* pc = &c; // define "pointer to char" variable pc
+                 // and give it the value: address of c
 
   printf("%c %p %p %c", c, &pc, pc, *pc);
   // Output: g 006FFBC0 006FFBCF g
 }
 
 void ChangingPointersTest() {
-  char c = 'g';   // Define char variable c
-                  // Assign 'g' to it
-  char d = 'f';   // Define char variable c
-                  // Assign 'f' to it
+  char c = 'g';   // Define char variable c assign it value: g
+  char d = 'f';   // Define char variable c assign it value: f
 
   char* pc = &c;  // Define pointer-to-char variable pc
-                  // Assign address of c to it
+                  // and assign it the value: <address of c>
   char* pd = &d;  // Define pointer-to-char variable pd
-                  // Assign address of d to it
+                  // and assign it the value <address of d>
 
-  printf("%c %c %p %p %p %p %c %c", c, d, &pc, &pd, pc, pd, *pc, *pd);
-  // Output: g f 006FFBB4 006FFBA8 006FFBCF 006FFBC3 g f
+  printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd);
+  // Output: g f 006FFBCF 006FFBC3 g f
 
   pd = pc; // Assign value in pc to pd
 
@@ -84,17 +81,15 @@ void ChangingPointersTest() {
 }
 
 void AssigningValuesUsingPointersTest() {
-  char c = 'g';  // Define char variable c and assign 'g' to it
+  char c = 'g';  // Define char variable c and assign it the value: g
   char* pc = &c; // Define pointer-to-char variable pc
-                 // Assign address of c to it
+                 // and assign the value: <address of c>
 
-  printf("%c", c);
-  // Output: g
+  printf("%c", c); // Output: g
 
-  *pc = 'f'; // Assign 'f' to variable c using dereferenced pointer pc
+  *pc = 'f'; // Using the dereferenced pointer pc, assign c the value: f
 
-  printf("%c", c);
-  // Output: f
+  printf("%c", c); // Output: f
 }
 
 int main()
