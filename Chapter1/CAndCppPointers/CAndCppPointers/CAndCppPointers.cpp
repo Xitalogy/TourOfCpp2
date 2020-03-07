@@ -4,7 +4,6 @@
 void CharVarTest() {
   char c;  // Define a variable whose name is c, type is char
   c = 'g'; // assign the character 'g' to variable c
-           // placing the value 'g' in c's memory "storage area"
 
   printf("%c", c); // Output: g
 }
@@ -17,20 +16,21 @@ void IntVarTest() {
 }
 
 void DefiningPointersTest() {
-  char* pc; // Defines a variable named pc of type "pointer to char"
-  int* pi;  // Defines a variable named pi of type "pointer to int"
+  char* pc; // Define a variable named pc of type "pointer to char"
+  int* pi;  // Define a variable named pi of type "pointer to int"
 }
 
 void AssigningValuesToPointersTest() {
   char c;   // Define a char variable
-  int i;    // Define an integer variable
+  int i;    // Define an int variable
 
   char* pc; // Defines a variable of type "pointer to char"
   int* pi;  // Defines a variable of type "pointer to int"
 
-  pc = &c;  // Get the address of the char variable c and put it in pc
-  pi = &i;  // Get the address of the int variable i and put it in pi
+  pc = &c;  // Get the address of the c and put it in pc
+  pi = &i;  // Get the address of the i and put it in pi
 
+  // Print out the addresses stored in pc and pi
   printf("%p %p", pc, pi); // Output: 02 04
 }
 
@@ -44,6 +44,7 @@ void PointerAddressesTest() {
   pc = &c;  // Get the address of c and put it in pc
   pi = &i;  // Get the address of i and put it in pi
   
+  // Print out the addresses then contents of the variables pc and pi
   printf("%p %p %p %p", &pc, &pi, pc, pi);
   // Output: 0C 09 02 04
 }
