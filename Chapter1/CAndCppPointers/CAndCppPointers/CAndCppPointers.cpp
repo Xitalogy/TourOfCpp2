@@ -104,11 +104,26 @@ void AssigningValuesUsingPointersTest() {
 
 int main()
 {
+  std::cout << "CharVarTest:" << std::endl;
   CharVarTest();
+
+  std::cout << std::endl << std::endl << "IntVarTest:" << std::endl;
   IntVarTest();
+
+  std::cout << std::endl << std::endl << "DefiningPointersTest:" << std::endl;
   DefiningPointersTest();
+
+  std::cout << std::endl << std::endl << "AssigningValuesToPointersTest:" << std::endl;
   AssigningValuesToPointersTest();
+
+  std::cout << std::endl << std::endl << "UsingPointersTest:" << std::endl;
   UsingPointersTest();
+
+  std::cout << std::endl << std::endl << "ChangingPointersTest:" << std::endl;
   ChangingPointersTest();
+
+  std::cout << std::endl << std::endl << "AssigningValuesUsingPointersTest:" << std::endl;
   AssigningValuesUsingPointersTest();
+
+  std::cout << std::endl;
 }
