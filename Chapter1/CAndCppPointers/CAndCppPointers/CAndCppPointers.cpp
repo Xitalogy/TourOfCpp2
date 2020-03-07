@@ -45,7 +45,7 @@ void PointersAreJustVariablesInMemoryTooTest() {
   pc = &c;  // Get the address of c and put it in pc
   pi = &i;  // Get the address of i and put it in pi
 
-  // Print out the addresses stored in pc and pi
+  // Print out the address of pi and pc and the addresses stored in them
   printf("%p %p %p %p", &pc, &pi, pc, pi);
   // Output: 0C 09 02 04
 }
@@ -110,7 +110,7 @@ void UsingARealMemorySpaceImplementationTest() {
   pc = &c;  // Get the address of c and put it in pc
   pi = &i;  // Get the address of i and put it in pi
 
-  // Print out the addresses stored in pc and pi
+  // Print out the address of pi and pc and the addresses stored in them
   printf("%p %p %p %p", &pc, &pi, pc, pi);
   // Output: 00CFFB84 00CFFB78 00CFFB9F 00CFFB90
 }
