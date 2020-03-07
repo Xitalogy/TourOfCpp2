@@ -59,8 +59,8 @@ void UsingPointersTest() {
 }
 
 void ChangingPointersTest() {
-  char c = 'g';   // Define char variable c assign it value: g
-  char d = 'f';   // Define char variable c assign it value: f
+  char c = 'g';   // Define char variable c and assign it value: g
+  char d = 'f';   // Define char variable c and assign it value: f
 
   char* pc = &c;  // Define pointer-to-char variable pc
                   // and assign it the value: `address of c`
@@ -87,7 +87,7 @@ void ChangingPointersTest() {
 void AssigningValuesUsingPointersTest() {
   char c = 'g';  // Define char variable c and assign it the value: g
   char* pc = &c; // Define pointer-to-char variable pc
-                 // and assign the value: `address of c`
+                 // and assign it the value: `address of c`
 
   printf("%c %c", c, *pc); // print out value stored in c
   // Output: g g
