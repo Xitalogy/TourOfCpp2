@@ -16,8 +16,8 @@ void IntVarTest() {
 }
 
 void DefiningPointersTest() {
-  char* pc; // Define a variable named pc of type "pointer to char"
-  int* pi;  // Define a variable named pi of type "pointer to int"
+  char* pc; // Define a variable named pc of type `pointer to char`
+  int* pi;  // Define a variable named pi of type `pointer to int`
 
   // Output the addresses of the pointer variables pc and pi
   printf("%p %p", &pc, &pi); // output 0C 09
@@ -27,11 +27,11 @@ void AssigningValuesToPointersTest() {
   char c;   // Define a char variable
   int i;    // Define an int variable
 
-  char* pc; // Defines a variable of type "pointer to char"
-  int* pi;  // Defines a variable of type "pointer to int"
+  char* pc; // Defines a variable of type `pointer to char`
+  int* pi;  // Defines a variable of type `pointer to int`
 
-  pc = &c;  // Get the address of the c and put it in pc
-  pi = &i;  // Get the address of the i and put it in pi
+  pc = &c;  // Get the address of c and put it in pc
+  pi = &i;  // Get the address of i and put it in pi
 
   // Print out the addresses stored in pc and pi
   printf("%p %p", pc, pi);
@@ -42,11 +42,11 @@ void PointersAreJustVariablesInMemoryTooTest() {
   char c;   // Define a char variable
   int i;    // Define an int variable
 
-  char* pc; // Defines a variable of type "pointer to char"
-  int* pi;  // Defines a variable of type "pointer to int"
+  char* pc; // Defines a variable of type `pointer to char`
+  int* pi;  // Defines a variable of type `pointer to int`
 
-  pc = &c;  // Get the address of the c and put it in pc
-  pi = &i;  // Get the address of the i and put it in pi
+  pc = &c;  // Get the address of c and put it in pc
+  pi = &i;  // Get the address of i and put it in pi
 
   // Print out the addresses stored in pc and pi
   printf("%p %p %p %p", &pc, &pi, pc, pi);
@@ -56,7 +56,7 @@ void PointersAreJustVariablesInMemoryTooTest() {
 void UsingPointersTest() {
   char c = 'g';  // define char variable c and give it the value: g
   char* pc = &c; // define "pointer to char" variable pc
-                 // and give it the value: address of c
+                 // and give it the value: `address of c`
 
   printf("%c %c", c, *pc); // Output: g g
 }
@@ -66,9 +66,9 @@ void ChangingPointersTest() {
   char d = 'f';   // Define char variable c assign it value: f
 
   char* pc = &c;  // Define pointer-to-char variable pc
-                  // and assign it the value: <address of c>
+                  // and assign it the value: `address of c`
   char* pd = &d;  // Define pointer-to-char variable pd
-                  // and assign it the value <address of d>
+                  // and assign it the value `address of d`
 
   printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd);
   // Output: g f 02 04 g f
@@ -82,7 +82,7 @@ void ChangingPointersTest() {
 
   std::cout << std::endl;
 
-  pc = &d; // Assign address of char variable d to pc
+  pc = &d; // Assign `address of d` to pc
   printf("%p %p %c %c", pc, pd, *pc, *pd);
   // Output: 04 02 f g
 }
@@ -90,10 +90,10 @@ void ChangingPointersTest() {
 void AssigningValuesUsingPointersTest() {
   char c = 'g';  // Define char variable c and assign it the value: g
   char* pc = &c; // Define pointer-to-char variable pc
-                 // and assign the value: <address of c>
+                 // and assign the value: `address of c`
 
   printf("%c %c", c, *pc); // print out value stored in c
- // Output: g g
+  // Output: g g
 
   std::cout << std::endl;
 
@@ -101,6 +101,21 @@ void AssigningValuesUsingPointersTest() {
 
   // Print out the value stored in c directly then with dereferenced pc
   printf("%c %c", c, *pc); // Output: f f
+}
+
+void UsingARealMemorySpaceImplementationTest() {
+  char c;   // Define a char variable
+  int i;    // Define an int variable
+
+  char* pc; // Defines a variable of type `pointer to char`
+  int* pi;  // Defines a variable of type `pointer to int`
+
+  pc = &c;  // Get the address of c and put it in pc
+  pi = &i;  // Get the address of i and put it in pi
+
+  // Print out the addresses stored in pc and pi
+  printf("%p %p %p %p", &pc, &pi, pc, pi);
+  // Output: 0C 09 02 04
 }
 
 int main()
@@ -128,6 +143,9 @@ int main()
 
   std::cout << std::endl << std::endl << "AssigningValuesUsingPointersTest:" << std::endl;
   AssigningValuesUsingPointersTest();
+
+  std::cout << std::endl << std::endl << "UsingARealMemorySpaceImplementationTest:" << std::endl;
+  UsingARealMemorySpaceImplementationTest();
 
   std::cout << std::endl;
 }
