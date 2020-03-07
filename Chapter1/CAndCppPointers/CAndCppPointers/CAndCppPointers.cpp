@@ -33,7 +33,22 @@ void AssigningValuesToPointersTest() {
   pc = &c;  // Get the address of the c and put it in pc
   pi = &i;  // Get the address of the i and put it in pi
 
-  // Print out the pointer addresses of and addresses stored in pc and pi
+  // Print out the addresses stored in pc and pi
+  printf("%p %p", pc, pi);
+  // Output: 02 04
+}
+
+void PointersAreJustVariablesInMemoryTooTest() {
+  char c;   // Define a char variable
+  int i;    // Define an int variable
+
+  char* pc; // Defines a variable of type "pointer to char"
+  int* pi;  // Defines a variable of type "pointer to int"
+
+  pc = &c;  // Get the address of the c and put it in pc
+  pi = &i;  // Get the address of the i and put it in pi
+
+  // Print out the addresses stored in pc and pi
   printf("%p %p %p %p", &pc, &pi, pc, pi);
   // Output: 0C 09 02 04
 }
@@ -101,6 +116,9 @@ int main()
 
   std::cout << std::endl << std::endl << "AssigningValuesToPointersTest:" << std::endl;
   AssigningValuesToPointersTest();
+
+  std::cout << std::endl << std::endl << "PointersAreJustVariablesInMemoryTooTest:" << std::endl;
+  PointersAreJustVariablesInMemoryTooTest();
 
   std::cout << std::endl << std::endl << "UsingPointersTest:" << std::endl;
   UsingPointersTest();
