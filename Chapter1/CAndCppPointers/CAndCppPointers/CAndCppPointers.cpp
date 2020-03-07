@@ -6,8 +6,6 @@ void CharVarTest() {
   c = 'g'; // assign the character 'g' to variable c
 
   printf("%c", c); // Output: g
-
-  std::cout << std::endl;
 }
 
 void IntVarTest() {
@@ -15,8 +13,6 @@ void IntVarTest() {
   i = 15339; // assign the integer value 15339 to i
 
   printf("%d", i); // Output: 15339
-
-  std::cout << std::endl;
 }
 
 void DefiningPointersTest() {
@@ -25,8 +21,6 @@ void DefiningPointersTest() {
 
   // Output the addresses of the pointer variables pc and pi
   printf("%p %p", &pc, &pi); // output 0C 09
-
-  std::cout << std::endl;
 }
 
 void AssigningValuesToPointersTest() {
@@ -42,8 +36,6 @@ void AssigningValuesToPointersTest() {
   // Print out the pointer addresses of and addresses stored in pc and pi
   printf("%p %p %p %p", &pc, &pi, pc, pi);
   // Output: 0C 09 02 04
-
-  std::cout << std::endl;
 }
 
 void UsingPointersTest() {
@@ -52,8 +44,6 @@ void UsingPointersTest() {
                  // and give it the value: address of c
 
   printf("%c %c", c, *pc); // Output: g g
-  
-  std::cout << std::endl;
 }
 
 void ChangingPointersTest() {
@@ -80,8 +70,6 @@ void ChangingPointersTest() {
   pc = &d; // Assign address of char variable d to pc
   printf("%p %p %c %c", pc, pd, *pc, *pd);
   // Output: 04 02 f g
-
-  std::cout << std::endl;
 }
 
 void AssigningValuesUsingPointersTest() {
@@ -89,8 +77,8 @@ void AssigningValuesUsingPointersTest() {
   char* pc = &c; // Define pointer-to-char variable pc
                  // and assign the value: <address of c>
 
-  printf("%c", c); // print out value stored in c
- // Output: g
+  printf("%c %c", c, *pc); // print out value stored in c
+ // Output: g g
 
   std::cout << std::endl;
 
@@ -98,8 +86,6 @@ void AssigningValuesUsingPointersTest() {
 
   // Print out the value stored in c directly then with dereferenced pc
   printf("%c %c", c, *pc); // Output: f f
-
-  std::cout << std::endl;
 }
 
 int main()
