@@ -18,9 +18,6 @@ void IntVarTest() {
 void DefiningPointersTest() {
   char* pc; // Define a variable named pc of type `pointer to char`
   int* pi;  // Define a variable named pi of type `pointer to int`
-
-  // Output the addresses of the pointer variables pc and pi
-  printf("%p %p", &pc, &pi); // output 0C 09
 }
 
 void AssigningValuesToPointersTest() {
