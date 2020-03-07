@@ -115,7 +115,7 @@ void UsingARealMemorySpaceImplementationTest() {
 
   // Print out the addresses stored in pc and pi
   printf("%p %p %p %p", &pc, &pi, pc, pi);
-  // Output: 0C 09 02 04
+  // Output: 00CFFB84 00CFFB78 00CFFB9F 00CFFB90
 }
 
 int main()
