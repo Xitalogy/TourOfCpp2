@@ -24,8 +24,8 @@ void AssigningValuesToPointersTest() {
   char c;   // Define a char variable
   int i;    // Define an int variable
 
-  char* pc; // Defines a variable of type `pointer to char`
-  int* pi;  // Defines a variable of type `pointer to int`
+  char* pc; // Define a variable of type `pointer to char`
+  int* pi;  // Define a variable of type `pointer to int`
 
   pc = &c;  // Get the address of c and put it in pc
   pi = &i;  // Get the address of i and put it in pi
@@ -39,8 +39,8 @@ void PointersAreJustVariablesInMemoryTooTest() {
   char c;   // Define a char variable
   int i;    // Define an int variable
 
-  char* pc; // Defines a variable of type `pointer to char`
-  int* pi;  // Defines a variable of type `pointer to int`
+  char* pc; // Define a variable of type `pointer to char`
+  int* pi;  // Define a variable of type `pointer to int`
 
   pc = &c;  // Get the address of c and put it in pc
   pi = &i;  // Get the address of i and put it in pi
@@ -74,14 +74,14 @@ void ChangingPointersTest() {
 
   pd = pc; // Assign value in pc to pd
 
-  printf("%p %p %c %c", pc, pd, *pc, *pd);
-  // Output: 02 02 g g
+  printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd);
+  // Output: g f 02 02 g g
 
   std::cout << std::endl;
 
   pc = &d; // Assign `address of d` to pc
-  printf("%p %p %c %c", pc, pd, *pc, *pd);
-  // Output: 04 02 f g
+  printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd);
+  // Output: g f 04 02 f g
 }
 
 void AssigningValuesUsingPointersTest() {
@@ -104,8 +104,8 @@ void UsingARealMemorySpaceImplementationTest() {
   char c;   // Define a char variable
   int i;    // Define an int variable
 
-  char* pc; // Defines a variable of type `pointer to char`
-  int* pi;  // Defines a variable of type `pointer to int`
+  char* pc; // Define a variable of type `pointer to char`
+  int* pi;  // Define a variable of type `pointer to int`
 
   pc = &c;  // Get the address of c and put it in pc
   pi = &i;  // Get the address of i and put it in pi
