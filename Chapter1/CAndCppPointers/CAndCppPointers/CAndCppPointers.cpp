@@ -89,7 +89,8 @@ void AssigningValuesUsingPointersTest() {
   char* pc = &c; // Define pointer-to-char variable pc
                  // and assign it the value: `address of c`
 
-  printf("%c %c", c, *pc); // print out value stored in c
+  // print out value stored in c directly then with dereferenced pc
+  printf("%c %c", c, *pc);
   // Output: g g
 
   std::cout << std::endl;
@@ -97,7 +98,8 @@ void AssigningValuesUsingPointersTest() {
   *pc = 'f'; // Using the dereferenced pointer pc, assign c the value: f
 
   // Print out the value stored in c directly then with dereferenced pc
-  printf("%c %c", c, *pc); // Output: f f
+  printf("%c %c", c, *pc);
+  // Output: f f
 }
 
 void UsingARealMemorySpaceImplementationTest() {
