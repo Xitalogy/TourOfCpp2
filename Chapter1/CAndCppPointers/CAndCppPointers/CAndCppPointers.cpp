@@ -3,9 +3,9 @@
 
 void CharVarTest() {
   char c;  // Define a variable whose name is c, type is char
-  c = 'g'; // assign the character 'g' to variable c
+  c = 'a'; // assign the character 'a' to variable c
 
-  printf("%c", c); // Output: g
+  printf("%c", c); // Output: a
 }
 
 void IntVarTest() {
@@ -51,15 +51,15 @@ void PointersAreJustVariablesInMemoryTooTest() {
 }
 
 void UsingPointersTest() {
-  char c = 'g';  // define char variable c and give it the value: g
+  char c = 'a';  // define char variable c and give it the value: a
   char* pc = &c; // define "pointer to char" variable pc
                  // and give it the value: `address of c`
 
-  printf("%c %c", c, *pc); // Output: g g
+  printf("%c %c", c, *pc); // Output: a a
 }
 
 void ChangingPointersTest() {
-  char c = 'g';   // Define char variable c and assign it value: g
+  char c = 'a';   // Define char variable c and assign it value: a
   char d = 'f';   // Define char variable c and assign it value: f
 
   char* pc = &c;  // Define pointer-to-char variable pc
@@ -68,30 +68,30 @@ void ChangingPointersTest() {
                   // and assign it the value `address of d`
 
   printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd);
-  // Output: g f 02 04 g f
+  // Output: a f 02 04 a f
 
   std::cout << std::endl;
 
   pd = pc; // Assign value in pc to pd
 
   printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd);
-  // Output: g f 02 02 g g
+  // Output: a f 02 02 a a
 
   std::cout << std::endl;
 
   pc = &d; // Assign `address of d` to pc
   printf("%c %c %p %p %c %c", c, d, pc, pd, *pc, *pd);
-  // Output: g f 04 02 f g
+  // Output: a f 04 02 f a
 }
 
 void AssigningValuesUsingPointersTest() {
-  char c = 'g';  // Define char variable c and assign it the value: g
+  char c = 'a';  // Define char variable c and assign it the value: a
   char* pc = &c; // Define pointer-to-char variable pc
                  // and assign it the value: `address of c`
 
   // print out value stored in c directly then with dereferenced pc
   printf("%c %c", c, *pc);
-  // Output: g g
+  // Output: a a
 
   std::cout << std::endl;
 
@@ -103,7 +103,7 @@ void AssigningValuesUsingPointersTest() {
 }
 
 void UsingARealMemorySpaceImplementationTest() {
-  char c = 'f';  // Define a char variable and assign value: 'f'
+  char c = 'a';  // Define a char variable and assign value: 'a'
   int i = 15336; // Define an int variable and assign value: 15336
 
   char* pc; // Define a variable of type `pointer to char`
