@@ -103,8 +103,8 @@ void AssigningValuesUsingPointersTest() {
 }
 
 void UsingARealMemorySpaceImplementationTest() {
-  char c;   // Define a char variable
-  int i;    // Define an int variable
+  char c = 'f';  // Define a char variable and assign value: 'f'
+  int i = 15336; // Define an int variable and assign value: 15336
 
   char* pc; // Define a variable of type `pointer to char`
   int* pi;  // Define a variable of type `pointer to int`
